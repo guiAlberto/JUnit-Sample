@@ -7,37 +7,74 @@ package unibh.es.junit;
  */
 public class Node {
 
+	private Integer value;
+	private Node left;
+	private Node right;
+
 	public Node(Integer value) {
-		// TODO Auto-generated constructor stub
+		this.value = value;
 	}
 
 	/**
 	 * Returns true if the node does not contains child.
+	 * 
 	 * @return true if the node does not contains child.
 	 */
 	public Boolean isLeaf() {
-		return null;
+		return left == null && right == null;
 	}
 
-	void setLeft(Node node) {
-		// TODO Auto-generated method stub
-		
+	public Integer getValue() {
+		return value;
 	}
 
-	void setRight(Node node) {
-		// TODO Auto-generated method stub
-		
+	public void setValue(Integer value) {
+		this.value = value;
 	}
 
-	Node getLeft() {
-		// TODO Auto-generated method stub
-		return null;
+	public Node getLeft() {
+		return left;
 	}
 
-	Node getRight() {
-		// TODO Auto-generated method stub
-		return null;
+	public void setLeft(Node left) {
+		this.left = left;
 	}
 
-	//TODO override equals() and hashCode()
+	public Node getRight() {
+		return right;
+	}
+
+	public void setRight(Node right) {
+		this.right = right;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((value == null) ? 0 : value.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Node other = (Node) obj;
+		if (value == null) {
+			if (other.value != null)
+				return false;
+		} else if (!value.equals(other.value))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return value.toString();
+	}
 }
