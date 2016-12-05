@@ -4,7 +4,7 @@ package unibh.es.junit;
  * The BinaryTree class wraps information about the root node of a tree.
  */
 public class BinaryTree {
-
+	
 	/**
 	 * Add a value to the tree.
 	 * 
@@ -12,7 +12,7 @@ public class BinaryTree {
 	 *            Integer value to be inserted into the tree.
 	 */
 	public void add(Integer value) {
-
+		
 	}
 
 	/**
@@ -60,6 +60,8 @@ public class BinaryTree {
 	 *             in case of the tree does not contains the value.
 	 */
 	public void remove(Integer value) throws IllegalArgumentException {
+		//TODO launch exeption if the tree does not contains the value
+
 	}
 
 	/**
@@ -68,6 +70,7 @@ public class BinaryTree {
 	 * @return the minimum value from the tree.
 	 */
 	public Integer getMinValue() throws Exception {
+		// TODO launch exception if the tree is empty
 		return null;
 	}
 
@@ -77,7 +80,15 @@ public class BinaryTree {
 	 * @return the maximum value from the tree.
 	 */
 	public Integer getMaxValue() throws Exception {
+		// TODO launch exception if the tree is empty
 		return null;
 	}
+
+	void setRoot(Node expectedRoot) {
+		// TODO Auto-generated method stub
+
+	}
+
+	// TODO override equals() and hashCode()
 
 }
